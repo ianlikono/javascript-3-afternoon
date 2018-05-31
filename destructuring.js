@@ -22,7 +22,8 @@ var carDetails = {
 */
 
 //Code Here
-
+const{color, make, model, year} = carDetails
+console.log(color)
 
 
 ////////// PROBLEM 2 //////////
@@ -35,6 +36,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
+  const{firstName, lastName, title} = obj
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -55,7 +57,11 @@ function greeting( obj ) {
 
 //Code Here
 
+function totalPopulation(obj) {
+  const{utah, california, texas, arizona} = obj
 
+  return utah + california + texas + arizona
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -68,6 +74,13 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+function ingredients(obj) {
+  const{carb, fat, protein}= obj
+  var arr = [];
+  arr.push(carb, fat, protein)
+  return arr;
+}
 
 
 
@@ -87,6 +100,21 @@ function greeting( obj ) {
 
 //Code Here
 
+function largeNumbers(obj) {
+  var {first, second, third} = obj;
+  var newArr = [];
+  var small = 100;
+  newArr.push(first, second, third);
+
+  for(let i = 0; i < newArr.length; i++){
+    if(newArr[i] < small){
+      small = newArr[i];
+    }
+  }
+
+  return small;
+}
+
 
 
 ////////// PROBLEM 6 //////////
@@ -98,5 +126,22 @@ function greeting( obj ) {
 */
 
 //Code Here
+function numberGroups(obj) {
+  let {a, b, c} = obj;
+  let newArr = [];
+  let arrNum = 0;
+  let longestArr = 0;
+  newArr.push(a, b, c);
+
+  for(let i = 0; i < newArr.length; i++) {
+    if(newArr[i].length > arrNum){
+      arrNum = newArr[i].length;
+      longestArr = newArr[i]
+    }
+  }
+
+  return longestArr;
+}
+
 
 
